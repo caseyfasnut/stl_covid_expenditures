@@ -1,0 +1,13 @@
+```SQL
+SELECT
+    SUM(GROSS_AMOUNT) AS Police_Food_Exp_Total,
+    AVG(GROSS_AMOUNT) AS Police_Food_Exp_Avg
+
+FROM `cert-project-308602.covid_expednditures.covid_expenditures`
+
+WHERE
+     DEPT = "POLICE" AND 
+     GROSS_AMOUNT > 0 AND 
+     COMMENT LIKE '%FOOD%' OR
+     COMMENT LIKE '%LUNCH%'
+```
